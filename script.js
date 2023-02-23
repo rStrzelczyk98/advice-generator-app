@@ -11,12 +11,12 @@ async function getAdvice(time) {
   const { id, advice } = dataJSON.slip;
   loading();
   displayAdvice(id, advice, time);
-  loseFocus();
+  loseFocus(time);
 }
 
-function loseFocus() {
+function loseFocus(time) {
   const click = btn.closest('.btn');
-  setTimeout(() => click.blur(), 600);
+  setTimeout(() => click.blur(), time);
 }
 
 function displayAdvice(arg_1, arg_2, time = 0) {
