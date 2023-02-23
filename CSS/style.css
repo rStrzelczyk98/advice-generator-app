@@ -66,8 +66,7 @@ a,
 }
 
 /* BUTTON */
-.btn,
-.btn:active {
+.btn {
   position: absolute;
   bottom: -3rem;
   justify-self: center;
@@ -87,15 +86,25 @@ a,
   transition: transform 1000ms ease-in-out;
 }
 
-.btn:hover {
+@media (hover: hover) {
+  .btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 2rem 1.5rem var(--neonGreenAlpha);
+  }
+
+  .btn:hover .dice-icon {
+    transform: rotate(360deg);
+  }
+}
+
+.btn:focus {
   cursor: pointer;
   box-shadow: 0 0 2rem 1.5rem var(--neonGreenAlpha);
 }
 
-.btn:hover .dice-icon {
+.btn:focus .dice-icon {
   transform: rotate(360deg);
 }
-
 /* FOOTER */
 
 .attribution {
