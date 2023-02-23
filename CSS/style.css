@@ -85,6 +85,7 @@ a,
   border-radius: 5rem;
   display: grid;
   place-items: center;
+  box-shadow: none;
   transition: box-shadow 300ms ease-in-out;
 }
 
