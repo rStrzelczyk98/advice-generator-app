@@ -19,8 +19,10 @@ html {
 body {
   background-color: var(--darkBlue);
   min-height: 100vh;
+  min-height: 100svh;
   display: grid;
-  justify-content: center;
+  align-items: center;
+  justify-items: center;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -64,8 +66,8 @@ a,
 }
 
 /* BUTTON */
-
-.btn {
+.btn,
+.btn:not(:hover) {
   position: absolute;
   bottom: -3rem;
   justify-self: center;
@@ -85,12 +87,12 @@ a,
   transition: transform 1000ms ease-in-out;
 }
 
-.btn:is(:hover) {
+.btn:hover {
   cursor: pointer;
   box-shadow: 0 0 2rem 1.5rem var(--neonGreenAlpha);
 }
 
-.btn:is(:hover) .dice-icon {
+.btn:hover .dice-icon {
   transform: rotate(360deg);
 }
 
