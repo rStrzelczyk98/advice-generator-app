@@ -1,0 +1,111 @@
+:root {
+  --lightCyan: hsl(193, 38%, 86%);
+  --neonGreen: hsl(150, 100%, 66%);
+  --neonGreenAlpha: hsla(150, 100%, 66%, 0.3);
+  --grayishBlue: hsl(217, 19%, 38%);
+  --darkGrayishBlue: hsl(217, 19%, 24%);
+  --darkBlue: hsl(218, 23%, 16%);
+}
+* {
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-weight: 800;
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--darkBlue);
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+a,
+.btn {
+  -webkit-tap-highlight-color: transparent;
+}
+.container {
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  max-width: 45rem;
+  background-color: var(--darkGrayishBlue);
+  display: grid;
+  gap: 2.5rem;
+  padding-inline: 2rem;
+  padding-block: 3rem 6rem;
+  border-radius: 1rem;
+  margin-inline: 1.5rem;
+  margin-bottom: 4rem;
+}
+.card h1 {
+  color: var(--neonGreen);
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.advice {
+  color: var(--lightCyan);
+  font-size: 2.4rem;
+  text-align: center;
+  quotes: auto;
+}
+.pattern {
+  height: 1.6rem;
+  background-image: url(../images/pattern-divider-mobile.svg);
+  background-position: center;
+}
+
+/* BUTTON */
+
+.btn {
+  position: absolute;
+  bottom: -3rem;
+  justify-self: center;
+  background-color: var(--neonGreen);
+  height: 6rem;
+  width: 6rem;
+  border: transparent;
+  outline: transparent;
+  border-radius: 5rem;
+  display: grid;
+  place-items: center;
+  transition: box-shadow 500ms ease-in-out;
+}
+
+.dice-icon {
+  display: block;
+  transition: transform 1000ms ease-in-out;
+}
+
+.btn:is(:hover) {
+  cursor: pointer;
+  box-shadow: 0 0 2rem 1.5rem var(--neonGreenAlpha);
+}
+
+.btn:is(:hover) .dice-icon {
+  transform: rotate(360deg);
+}
+
+/* FOOTER */
+.attribution p {
+  color: var(--lightCyan);
+  font-size: 1.1rem;
+  text-align: center;
+}
+.attribution a:is(:link, :visited) {
+  color: var(--neonGreen);
+  text-decoration: none;
+}
+.attribution a:is(:hover, :active) {
+  text-decoration: underline;
+}
