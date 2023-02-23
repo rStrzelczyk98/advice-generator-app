@@ -86,16 +86,16 @@ a,
   display: grid;
   place-items: center;
   box-shadow: none;
-  transition: box-shadow 300ms ease-in-out;
+  transition: box-shadow 500ms ease-in;
 }
 
 .dice-icon {
   display: block;
-  transition: transform 300ms linear;
+  transition: transform 500ms linear;
 }
 
 .roll {
-  transform: rotate(180deg);
+  transform: rotate(270deg);
 }
 @media (pointer: coarse) {
   .btn:focus {
