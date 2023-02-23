@@ -22,10 +22,19 @@ body {
   min-height: 100svh;
   display: grid;
   align-items: center;
-  justify-items: center;
 }
 body::-webkit-scrollbar {
   display: none;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    align-items: end;
+    justify-items: center;
+  }
+  .card {
+    width: 45rem;
+  }
 }
 a,
 .btn {
@@ -34,16 +43,14 @@ a,
 
 /* CARD */
 .card {
-  align-self: center;
   position: relative;
-  max-width: 45rem;
   background-color: var(--darkGrayishBlue);
   display: grid;
   gap: 2.5rem;
   padding-inline: 2rem;
   padding-block: 3rem 6rem;
   border-radius: 1rem;
-  margin-inline: 1.5rem;
+  margin: 1.5rem;
   margin-bottom: 4rem;
 }
 .card h1 {
@@ -78,12 +85,22 @@ a,
   border-radius: 5rem;
   display: grid;
   place-items: center;
-  transition: box-shadow 500ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out;
 }
 
 .dice-icon {
   display: block;
-  transition: transform 1000ms ease-in-out;
+  transition: transform 600ms ease-in-out;
+}
+@media (hover: none) {
+  .btn:focus {
+    cursor: pointer;
+    box-shadow: 0 0 2rem 1.5rem var(--neonGreenAlpha);
+  }
+
+  .btn:focus .dice-icon {
+    transform: rotate(225deg);
+  }
 }
 
 @media (hover: hover) {
@@ -93,17 +110,8 @@ a,
   }
 
   .btn:hover .dice-icon {
-    transform: rotate(360deg);
+    transform: rotate(225deg);
   }
-}
-
-.btn:focus {
-  cursor: pointer;
-  box-shadow: 0 0 2rem 1.5rem var(--neonGreenAlpha);
-}
-
-.btn:focus .dice-icon {
-  transform: rotate(360deg);
 }
 /* FOOTER */
 
