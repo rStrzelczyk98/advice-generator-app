@@ -3,7 +3,7 @@
 const btn = document.querySelector('.btn');
 
 window.addEventListener('load', getAdvice);
-btn.addEventListener('click', getAdvice.bind(300));
+btn.addEventListener('click', getAdvice.bind(null, 300));
 
 async function getAdvice(time) {
   const data = await fetch('https://api.adviceslip.com/advice');
