@@ -67,7 +67,7 @@ a,
 
 /* BUTTON */
 .btn,
-.btn:not(:hover) {
+.btn:active {
   position: absolute;
   bottom: -3rem;
   justify-self: center;
