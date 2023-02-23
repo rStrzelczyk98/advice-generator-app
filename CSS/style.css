@@ -91,16 +91,16 @@ a,
 
 .dice-icon {
   display: block;
-  transition: transform 600ms ease-in-out;
+  transition: transform 300ms linear;
+}
+
+.roll {
+  transform: rotate(180deg);
 }
 @media (pointer: coarse) {
   .btn:focus {
     cursor: pointer;
     box-shadow: 0 0 2rem 1.5rem var(--neonGreenAlpha);
-  }
-
-  .btn:focus .dice-icon {
-    transform: rotate(225deg);
   }
 }
 
@@ -108,10 +108,6 @@ a,
   .btn:hover {
     cursor: pointer;
     box-shadow: 0 0 2rem 1.5rem var(--neonGreenAlpha);
-  }
-
-  .btn:hover .dice-icon {
-    transform: rotate(225deg);
   }
 }
 /* FOOTER */
