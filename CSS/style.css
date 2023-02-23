@@ -85,12 +85,12 @@ a,
   transition: transform 1000ms ease-in-out;
 }
 
-.btn:is(:hover, :focus) {
+.btn:is(:hover) {
   cursor: pointer;
   box-shadow: 0 0 2rem 1.5rem var(--neonGreenAlpha);
 }
 
-.btn:is(:hover, :focus) .dice-icon {
+.btn:is(:hover) .dice-icon {
   transform: rotate(360deg);
 }
 
