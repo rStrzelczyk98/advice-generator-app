@@ -112,8 +112,3 @@ a,
 .attribution a:is(:hover, :active) {
   text-decoration: underline;
 }
-
-.btn.active {
-  pointer-events: none;
-  background-color: var(--lightCyan);
-}
